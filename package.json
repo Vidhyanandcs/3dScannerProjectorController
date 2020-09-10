@@ -3,7 +3,7 @@
   "ProductName": "Projector Controller",
   "version": "1.0.0",
   "description": "Projector controller for U2 Scanner",
-  "main": "main.js",
+  "main": "app.js",
   "scripts": {
     "start": "electron .",
     "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --icon=public/icons/pme.ico --prune=false --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Projector Controller\"",
@@ -18,7 +18,7 @@
   "devDependencies": {},
   "dependencies": {
     "axios": "^0.20.0",
-    "express": "^4.17.1",
+    "express": "^4.16.4",
     "hbs": "^4.1.1"
   },
   "repository": {
