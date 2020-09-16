@@ -22,7 +22,7 @@ app.get('', (req,res) => {
 
     try {
 
-        const data = cp.execSync('@mirage -f /home/pi/3dScannerProjectorController/public/img/pattern.png', exec_options);
+        const data = cp.execSync('sudo feh -F --zoom fill /home/pi/3dScannerProjectorController/public/img/pattern.png', exec_options);
 
     } catch (err) {
 
