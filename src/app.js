@@ -22,7 +22,21 @@ app.get('', (req,res) => {
 
     try {
 
-        const data = cp.execSync('sudo feh -F --zoom fill /home/pi/3dScannerProjectorController/public/img/pattern.png', exec_options);
+        const data = cp.execSync('sudo export DISPLAY=:0' , function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            }
+        });
+        
+        const data1 = cp.execSync('sudo gpicview  /home/pi/3dScannerProjectorController/public/img/pattern.png', function (error, stdout, stderr) {
+            console.log('stdout: ' + stdout);
+            console.log('stderr: ' + stderr);
+            if (error !== null) {
+                console.log('exec error: ' + error);
+            }
+        });
 
     } catch (err) {
 
